@@ -1,0 +1,19 @@
+@import url("../font.css");
+@import url("../colors.css");
+
+.homebox {
+  width: auto;
+  height: max-content;
+  padding: 10px;
+}
+
+.homeLine {
+  font-size: 4em;
+  color: var(--prussian-blue);
+}
+
+.text-outline {
+  /* Text color */
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white; /* Creates the outline */
+}

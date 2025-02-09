@@ -1,0 +1,25 @@
+@import url("../font.css");
+@import url("../colors.css");
+
+#header {
+  text-align: center;
+  font-size: x-large;
+}
+
+.skill-card {
+  background-color: var(--prussian-blue);
+  width: fit-content;
+  color: var(--blue-ncs);
+  margin: 1vw;
+  padding: 4%;
+  font-size: 28px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+}

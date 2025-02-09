@@ -1,0 +1,100 @@
+@import url("../colors.css");
+@import url("../font.css");
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 {
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  /* position: fixed; */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Menu (Desktop) */
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navMenu li a {
+  text-decoration: none;
+  color: var(--prussian-blue);
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navMenu li a:hover {
+  color: var(--blue-ncs-light);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navMenu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--french-gray-transperent);
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .navMenu.open {
+    display: flex;
+  }
+
+  .navMenu li {
+    margin-bottom: 15px;
+  }
+}

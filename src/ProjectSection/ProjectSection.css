@@ -1,0 +1,67 @@
+/* Root Variables (If Not Already Included) */
+:root {
+  --silver-lake-blue: #6486ad;
+  --prussian-blue: #222b3a;
+  --yinmn-blue: #305782;
+  --french-gray: #cad0db;
+  --blue-ncs: #048ccd;
+  --french-gray-transperent: #cad0db83;
+  --blue-ncs-light: #9bdfff;
+}
+
+/* Section Styling */
+.section.projects {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Header Styling */
+#header {
+  margin-bottom: 20px;
+}
+
+#header h2 {
+  color: var(--prussian-blue);
+  font-size: 2rem;
+}
+
+/* Projects Grid using Flexbox */
+.projects-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 20px; /* Adds spacing between items */
+  padding: 20px;
+}
+
+/* Project Card */
+.project-card {
+  flex: 1 1 calc(33.33% - 20px); /* Each card takes 1/3rd of the space */
+  max-width: 300px; /* Limit card width */
+  background: var(--yinmn-blue);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .projects-grid {
+    justify-content: center;
+  }
+
+  .project-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%; /* One card per row on small screens */
+  }
+}
